@@ -1,0 +1,200 @@
+/* ===== RESET ===== */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== HEADER FIXE ===== */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #e5a4cb;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.main-header .logo a {
+    text-decoration: none;
+    color: #4a2c3a;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #4a2c3a;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active {
+    color: white;
+}
+
+/* ===== ESPACE POUR LE HEADER FIXE ===== */
+body {
+    padding-top: 70px;
+}
+
+/* ===== SECTION CONTACT ===== */
+.contact-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.contact-section h1 {
+    text-align: center;
+    color: #5c3d2e;
+    margin-bottom: 25px;
+}
+
+/* ===== FORM CONTAINER ===== */
+.container {
+    background-color: #f4e3d8;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(92, 61, 46, 0.15);
+    border: 2px solid #e8d4c2;
+}
+
+/* ===== LABELS ===== */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #5c3d2e;
+}
+
+/* ===== INPUTS / SELECT / TEXTAREA ===== */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #e8d4c2;
+    border-radius: 5px;
+    background-color: #fff7f6;
+    color: #333;
+    transition: 0.3s ease;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #e5a4cb;
+    background-color: #fce8e6;
+    outline: none;
+}
+
+textarea#message {
+    resize: vertical;
+}
+
+/* ===== CHECKBOX ===== */
+.checkbox-group {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.inline-label {
+    margin-left: 10px;
+    color: #5c3d2e;
+    font-weight: normal;
+}
+
+/* ===== BUTTON ===== */
+button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background-color: #e5a4cb;
+    color: #4a2c3a;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #88b04b;
+    color: white;
+}
+
+/* ========================================================= */
+/* ===============   RESPONSIVE MINIMAL   ================== */
+/* ========================================================= */
+
+/* Tablettes ≤ 768px */
+@media (max-width: 768px) {
+
+    .container {
+        padding: 18px;
+    }
+
+    input, select, textarea {
+        font-size: 14px;
+        padding: 9px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 11px;
+    }
+
+    /* Le header se met juste en colonne, sans rien changer d'autre */
+    .main-header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 20px;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+/* Petits téléphones ≤ 480px */
+@media (max-width: 480px) {
+
+    .container {
+        padding: 12px;
+    }
+
+    input, select, textarea {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .contact-section {
+        margin: 20px auto;
+        padding: 15px;
+    }
+}

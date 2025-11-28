@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - BloomPetals</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER FIXE ===== -->
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html">BloomPetals</a>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="entreprise.html">Entreprise</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== SECTION CONTACT ===== -->
+    <section class="contact-section">
+        <h1>Contactez-nous</h1>
+
+        <div class="container">
+
+            <form action="#" method="post">
+
+                <label for="civilite">Civilité</label>
+                <select id="civilite" name="civilite" required>
+                    <option value="">-- Sélectionnez --</option>
+                    <option value="mr">Monsieur</option>
+                    <option value="mme">Madame</option>
+                    <option value="mlle">Mademoiselle</option>
+                </select>
+
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+
+                <label for="adresse">Adresse postale</label>
+                <textarea id="adresse" name="adresse" rows="3" placeholder="Votre adresse complète" required></textarea>
+
+                <label for="message">Votre message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Expliquez-nous votre demande..." required></textarea>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="confidentialite" required>
+                    <label for="confidentialite" class="inline-label">
+                        J'accepte la politique de confidentialité.
+                    </label>
+                </div>
+
+                <button type="submit">Envoyer</button>
+
+            </form>
+
+        </div>
+    </section>
+
+</body>
+</html>
