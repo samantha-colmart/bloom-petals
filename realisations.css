@@ -1,0 +1,124 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== FIXED HEADER ===== */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #e5a4cb;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.main-header .logo a {
+    color: #4a2c3a;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu ul li a {
+    color: #4a2c3a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active {
+    color: white;
+}
+
+/* ===== ESPACE POUR HEADER ===== */
+body {
+    padding-top: 80px;
+    background-color: #fce8e6;
+}
+
+/* ===== TITRE ===== */
+.titre-page {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.titre-page h1 {
+    color: #5c3d2e;
+    margin-bottom: 10px;
+}
+
+.titre-page p {
+    color: #4a2c3a;
+}
+
+/* ===== GALERIE ===== */
+.galerie {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.photo {
+    background-color: #e8d4c2;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablette */
+@media (max-width: 900px) {
+    .galerie {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Petit tablet / grand mobile */
+@media (max-width: 650px) {
+    .galerie {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+    .galerie {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
